@@ -16,11 +16,12 @@ services:
     image: mongo-express: ${APP_VERSION}
     restart: always
     ports:
-      - 8081:8081
+      - ${APP_PORT}:8081
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: ${DB_MONGO_USER}
       ME_CONFIG_MONGODB_ADMINPASSWORD: ${DB_MONGO_PASSWORD}
       ME_CONFIG_MONGODB_URL: mongodb://${DB_MONGO_USER}:${DB_MONGO_PASSWORD}@mongo:27017/
+
 networks:
   default:
       name: ${APP_NAME}
