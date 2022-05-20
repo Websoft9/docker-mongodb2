@@ -1,4 +1,4 @@
-# docs: https://github.com/docker-library/docs/blob/master/mongo/stack.yml
+# refer to: https://github.com/docker-library/docs/blob/master/mongo/stack.yml
 # image: https://hub.docker.com/_/mongo
 
 version: '3.8'
