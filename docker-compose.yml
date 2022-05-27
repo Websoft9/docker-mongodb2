@@ -5,12 +5,12 @@ version: '3.8'
 
 services:
   mongo:
-    image: mongo:${DB_MONGO_VERSION}
+    image: mongo:${APP_VERSION}
     restart: always
     container_name: ${APP_NAME}
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${DB_MONGO_USER}
-      MONGO_INITDB_ROOT_PASSWORD: ${DB_MONGO_PASSWORD}
+      MONGO_INITDB_ROOT_USERNAME: ${APP_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
     volumes:
       - mongo_data:/data/db
 
