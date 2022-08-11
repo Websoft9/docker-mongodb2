@@ -1,6 +1,8 @@
-## About
+## MongoDB
 
-This repository is forked from ONLYOFFICE/Docker-CommunityServer, we have the following modifications are provided
+### MongoDB的认证
 
-* replace README.md
-* add README-zh.md, CHANGELOG.md, Note.md, License.md, docker-compose.yml,.env, src, .github folder
+MongoDB认证与下列三处相关：
+- 环境变量用户和密码的设置，如果设置用户和密码后，默认已经开启了认证
+- 通过挂载mongod.conf配置文件设置认证相关选项
+- 通过comman参数noauth或auth直接设置
