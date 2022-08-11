@@ -13,11 +13,10 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${APP_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${APP_PASSWORD}
-    command: --serviceExecutor adaptive --wiredTigerCacheSizeGB 1.5 --config /etc/mongod.conf
+    command: ${APP_COMMAND}
     volumes:
       - mongo_data:/data/db
       - ./src/mongod.conf:/etc/mongod.conf
-
 
 networks:
   default:
